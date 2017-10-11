@@ -14,6 +14,14 @@
 		1A57C6011F881405007D2BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A57C5FF1F881405007D2BD7 /* LaunchScreen.storyboard */; };
 		1A57C60C1F881405007D2BD7 /* ChicagoComedyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C60B1F881405007D2BD7 /* ChicagoComedyTests.swift */; };
 		1A57C6171F881405007D2BD7 /* ChicagoComedyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C6161F881405007D2BD7 /* ChicagoComedyUITests.swift */; };
+		1A57C6261F881757007D2BD7 /* CurrentEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C6251F881757007D2BD7 /* CurrentEventsViewController.swift */; };
+		1A57C6291F881812007D2BD7 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C6281F881812007D2BD7 /* EventCell.swift */; };
+		1A57C62C1F881A63007D2BD7 /* EventAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C62B1F881A63007D2BD7 /* EventAPIClient.swift */; };
+		1A57C62E1F88237B007D2BD7 /* EventDetailsViewControlelr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C62D1F88237B007D2BD7 /* EventDetailsViewControlelr.swift */; };
+		1A57C6301F883C82007D2BD7 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C62F1F883C82007D2BD7 /* RootNavigationController.swift */; };
+		7A874E93C84B5FDB7DEE20DD /* Pods_ChicagoComedyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A814EEF48AAEE160495FB9 /* Pods_ChicagoComedyUITests.framework */; };
+		97D8E1F310273D6087580C74 /* Pods_ChicagoComedyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468CC6C64E4F08EDE31F8C00 /* Pods_ChicagoComedyTests.framework */; };
+		E3E9FB31852B810CF3EE98AA /* Pods_ChicagoComedy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474FD40640578183E244CDC5 /* Pods_ChicagoComedy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		007AEA1E5916E1AA47E203B6 /* Pods-ChicagoComedyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedyTests/Pods-ChicagoComedyTests.release.xcconfig"; sourceTree = "<group>"; };
 		1A57C5F31F881405007D2BD7 /* ChicagoComedy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChicagoComedy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A57C5F61F881405007D2BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A57C5F81F881405007D2BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,19 @@
 		1A57C6121F881405007D2BD7 /* ChicagoComedyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChicagoComedyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A57C6161F881405007D2BD7 /* ChicagoComedyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicagoComedyUITests.swift; sourceTree = "<group>"; };
 		1A57C6181F881405007D2BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A57C6251F881757007D2BD7 /* CurrentEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsViewController.swift; sourceTree = "<group>"; };
+		1A57C6281F881812007D2BD7 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		1A57C62B1F881A63007D2BD7 /* EventAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAPIClient.swift; sourceTree = "<group>"; };
+		1A57C62D1F88237B007D2BD7 /* EventDetailsViewControlelr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewControlelr.swift; sourceTree = "<group>"; };
+		1A57C62F1F883C82007D2BD7 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		24D2FE0B8B9E145843522B7F /* Pods-ChicagoComedy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedy/Pods-ChicagoComedy.debug.xcconfig"; sourceTree = "<group>"; };
+		42A814EEF48AAEE160495FB9 /* Pods_ChicagoComedyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChicagoComedyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		468CC6C64E4F08EDE31F8C00 /* Pods_ChicagoComedyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChicagoComedyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		474FD40640578183E244CDC5 /* Pods_ChicagoComedy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChicagoComedy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB083B0114F6AC8987A0E891 /* Pods-ChicagoComedyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedyUITests/Pods-ChicagoComedyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD4D8418944AD714779FA370 /* Pods-ChicagoComedyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedyUITests/Pods-ChicagoComedyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FCE7711396486D3E7A54254B /* Pods-ChicagoComedy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedy/Pods-ChicagoComedy.release.xcconfig"; sourceTree = "<group>"; };
+		FDE4F47430D6451470185E4A /* Pods-ChicagoComedyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedyTests/Pods-ChicagoComedyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E9FB31852B810CF3EE98AA /* Pods_ChicagoComedy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D8E1F310273D6087580C74 /* Pods_ChicagoComedyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A874E93C84B5FDB7DEE20DD /* Pods_ChicagoComedyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,8 @@
 				1A57C60A1F881405007D2BD7 /* ChicagoComedyTests */,
 				1A57C6151F881405007D2BD7 /* ChicagoComedyUITests */,
 				1A57C5F41F881405007D2BD7 /* Products */,
+				392DEEFDE9CD16821E37489E /* Pods */,
+				CDB0970D28676DF61B49A0A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +124,9 @@
 		1A57C5F51F881405007D2BD7 /* ChicagoComedy */ = {
 			isa = PBXGroup;
 			children = (
+				1A57C62A1F881A47007D2BD7 /* DataControllers */,
+				1A57C6271F8817FD007D2BD7 /* Cells */,
+				1A57C6241F881740007D2BD7 /* ViewControllers */,
 				1A57C5F61F881405007D2BD7 /* AppDelegate.swift */,
 				1A57C5F81F881405007D2BD7 /* ViewController.swift */,
 				1A57C5FA1F881405007D2BD7 /* Main.storyboard */,
@@ -125,6 +155,55 @@
 			path = ChicagoComedyUITests;
 			sourceTree = "<group>";
 		};
+		1A57C6241F881740007D2BD7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A57C6251F881757007D2BD7 /* CurrentEventsViewController.swift */,
+				1A57C62D1F88237B007D2BD7 /* EventDetailsViewControlelr.swift */,
+				1A57C62F1F883C82007D2BD7 /* RootNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A57C6271F8817FD007D2BD7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A57C6281F881812007D2BD7 /* EventCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1A57C62A1F881A47007D2BD7 /* DataControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A57C62B1F881A63007D2BD7 /* EventAPIClient.swift */,
+			);
+			path = DataControllers;
+			sourceTree = "<group>";
+		};
+		392DEEFDE9CD16821E37489E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24D2FE0B8B9E145843522B7F /* Pods-ChicagoComedy.debug.xcconfig */,
+				FCE7711396486D3E7A54254B /* Pods-ChicagoComedy.release.xcconfig */,
+				FDE4F47430D6451470185E4A /* Pods-ChicagoComedyTests.debug.xcconfig */,
+				007AEA1E5916E1AA47E203B6 /* Pods-ChicagoComedyTests.release.xcconfig */,
+				AB083B0114F6AC8987A0E891 /* Pods-ChicagoComedyUITests.debug.xcconfig */,
+				DD4D8418944AD714779FA370 /* Pods-ChicagoComedyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDB0970D28676DF61B49A0A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				474FD40640578183E244CDC5 /* Pods_ChicagoComedy.framework */,
+				468CC6C64E4F08EDE31F8C00 /* Pods_ChicagoComedyTests.framework */,
+				42A814EEF48AAEE160495FB9 /* Pods_ChicagoComedyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A57C61B1F881405007D2BD7 /* Build configuration list for PBXNativeTarget "ChicagoComedy" */;
 			buildPhases = (
+				36A7FDF7A2DC941DD8558793 /* [CP] Check Pods Manifest.lock */,
 				1A57C5EF1F881404007D2BD7 /* Sources */,
 				1A57C5F01F881404007D2BD7 /* Frameworks */,
 				1A57C5F11F881404007D2BD7 /* Resources */,
+				C76BB1B2C8C06A462CEAB852 /* [CP] Embed Pods Frameworks */,
+				950214584CD11A12A3798E7D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A57C61E1F881405007D2BD7 /* Build configuration list for PBXNativeTarget "ChicagoComedyTests" */;
 			buildPhases = (
+				C6E84A9EF3BCE7CA86687CE1 /* [CP] Check Pods Manifest.lock */,
 				1A57C6031F881405007D2BD7 /* Sources */,
 				1A57C6041F881405007D2BD7 /* Frameworks */,
 				1A57C6051F881405007D2BD7 /* Resources */,
+				00604E02409B7213E5F8BE3A /* [CP] Embed Pods Frameworks */,
+				B31E2E22A1B9D77FFD98DC93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A57C6211F881405007D2BD7 /* Build configuration list for PBXNativeTarget "ChicagoComedyUITests" */;
 			buildPhases = (
+				017168FC7BB0B9317A3725B1 /* [CP] Check Pods Manifest.lock */,
 				1A57C60E1F881405007D2BD7 /* Sources */,
 				1A57C60F1F881405007D2BD7 /* Frameworks */,
 				1A57C6101F881405007D2BD7 /* Resources */,
+				353C046ED5EFC226EF1B81A7 /* [CP] Embed Pods Frameworks */,
+				ACED9DA82D03FA5E352383A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +342,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00604E02409B7213E5F8BE3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChicagoComedyTests/Pods-ChicagoComedyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		017168FC7BB0B9317A3725B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		353C046ED5EFC226EF1B81A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChicagoComedyUITests/Pods-ChicagoComedyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36A7FDF7A2DC941DD8558793 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		950214584CD11A12A3798E7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChicagoComedy/Pods-ChicagoComedy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACED9DA82D03FA5E352383A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChicagoComedyUITests/Pods-ChicagoComedyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B31E2E22A1B9D77FFD98DC93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChicagoComedyTests/Pods-ChicagoComedyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6E84A9EF3BCE7CA86687CE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C76BB1B2C8C06A462CEAB852 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChicagoComedy/Pods-ChicagoComedy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A57C5EF1F881404007D2BD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A57C62E1F88237B007D2BD7 /* EventDetailsViewControlelr.swift in Sources */,
+				1A57C62C1F881A63007D2BD7 /* EventAPIClient.swift in Sources */,
+				1A57C6291F881812007D2BD7 /* EventCell.swift in Sources */,
+				1A57C6261F881757007D2BD7 /* CurrentEventsViewController.swift in Sources */,
 				1A57C5F91F881405007D2BD7 /* ViewController.swift in Sources */,
+				1A57C6301F883C82007D2BD7 /* RootNavigationController.swift in Sources */,
 				1A57C5F71F881405007D2BD7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,11 +655,14 @@
 		};
 		1A57C61C1F881405007D2BD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24D2FE0B8B9E145843522B7F /* Pods-ChicagoComedy.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6Y7MH7N2M;
 				INFOPLIST_FILE = ChicagoComedy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myboringtown.ChicagoComedy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +673,14 @@
 		};
 		1A57C61D1F881405007D2BD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCE7711396486D3E7A54254B /* Pods-ChicagoComedy.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6Y7MH7N2M;
 				INFOPLIST_FILE = ChicagoComedy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myboringtown.ChicagoComedy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,8 +691,9 @@
 		};
 		1A57C61F1F881405007D2BD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE4F47430D6451470185E4A /* Pods-ChicagoComedyTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6Y7MH7N2M;
@@ -471,8 +709,9 @@
 		};
 		1A57C6201F881405007D2BD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007AEA1E5916E1AA47E203B6 /* Pods-ChicagoComedyTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6Y7MH7N2M;
@@ -488,8 +727,9 @@
 		};
 		1A57C6221F881405007D2BD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB083B0114F6AC8987A0E891 /* Pods-ChicagoComedyUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6Y7MH7N2M;
 				INFOPLIST_FILE = ChicagoComedyUITests/Info.plist;
@@ -504,8 +744,9 @@
 		};
 		1A57C6231F881405007D2BD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD4D8418944AD714779FA370 /* Pods-ChicagoComedyUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6Y7MH7N2M;
 				INFOPLIST_FILE = ChicagoComedyUITests/Info.plist;

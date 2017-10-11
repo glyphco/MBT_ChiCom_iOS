@@ -1,0 +1,6 @@
+framework module Pods_ChicagoComedyUITests {
+  umbrella header "Pods-ChicagoComedyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
