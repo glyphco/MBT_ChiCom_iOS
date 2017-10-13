@@ -24,38 +24,59 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="81" id="8ka-hx-gTD" customClass="EventCell" customModule="ChicagoComedy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="81"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="156" id="8ka-hx-gTD" customClass="EventCell" customModule="ChicagoComedy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ka-hx-gTD" id="BW7-Ve-9n7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="155.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUI-eP-asc">
-                                                    <rect key="frame" x="77" y="30" width="281" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4zc-jr-yij">
+                                                    <rect key="frame" x="24" y="45.5" width="50" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="GKp-A2-2Dh"/>
+                                                        <constraint firstAttribute="width" constant="50" id="r2Z-5H-OqD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No venue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zON-JS-nzN">
+                                                    <rect key="frame" x="86" y="87.5" width="273" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-0g-UfE">
+                                                    <rect key="frame" x="86" y="113.5" width="273" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text=" Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUI-eP-asc">
+                                                    <rect key="frame" x="86" y="24" width="272" height="55.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4zc-jr-yij">
-                                                    <rect key="frame" x="19" y="8" width="50" height="65"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="gwH-36-JbA"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zON-JS-nzN" secondAttribute="trailing" constant="8" id="11g-Ml-r8Y"/>
+                                                <constraint firstItem="WVP-0g-UfE" firstAttribute="leading" secondItem="4zc-jr-yij" secondAttribute="trailing" constant="12" id="6qZ-2c-QpC"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LUI-eP-asc" secondAttribute="trailing" constant="9" id="7cw-5M-dyq"/>
-                                                <constraint firstItem="LUI-eP-asc" firstAttribute="leading" secondItem="4zc-jr-yij" secondAttribute="trailing" constant="8" id="R5s-ur-T5L"/>
-                                                <constraint firstAttribute="bottom" secondItem="4zc-jr-yij" secondAttribute="bottom" constant="7.5" id="SIU-a0-1jL"/>
-                                                <constraint firstItem="LUI-eP-asc" firstAttribute="centerY" secondItem="BW7-Ve-9n7" secondAttribute="centerY" id="TGh-d1-iwk"/>
-                                                <constraint firstItem="4zc-jr-yij" firstAttribute="top" secondItem="BW7-Ve-9n7" secondAttribute="top" constant="8" id="kYm-Gn-Ngz"/>
-                                                <constraint firstItem="4zc-jr-yij" firstAttribute="leading" secondItem="BW7-Ve-9n7" secondAttribute="leading" constant="19" id="uTA-Wt-D29"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WVP-0g-UfE" secondAttribute="bottom" constant="16" id="BNt-6o-4ok"/>
+                                                <constraint firstItem="4zc-jr-yij" firstAttribute="leading" secondItem="BW7-Ve-9n7" secondAttribute="leadingMargin" constant="16" id="BOq-xv-oFq"/>
+                                                <constraint firstItem="LUI-eP-asc" firstAttribute="leading" secondItem="4zc-jr-yij" secondAttribute="trailing" constant="12" id="Gbu-H1-Bzr"/>
+                                                <constraint firstItem="4zc-jr-yij" firstAttribute="centerY" secondItem="BW7-Ve-9n7" secondAttribute="centerY" id="IkB-Gb-jaJ"/>
+                                                <constraint firstItem="LUI-eP-asc" firstAttribute="top" secondItem="BW7-Ve-9n7" secondAttribute="topMargin" constant="16" id="JHn-rp-pkU"/>
+                                                <constraint firstItem="WVP-0g-UfE" firstAttribute="top" secondItem="zON-JS-nzN" secondAttribute="bottom" constant="8" id="ew3-gM-kCr"/>
+                                                <constraint firstItem="zON-JS-nzN" firstAttribute="leading" secondItem="4zc-jr-yij" secondAttribute="trailing" constant="12" id="g3E-Mx-Sk7"/>
+                                                <constraint firstItem="zON-JS-nzN" firstAttribute="top" secondItem="LUI-eP-asc" secondAttribute="bottom" constant="8" id="t18-Cc-IF6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WVP-0g-UfE" secondAttribute="trailing" constant="8" id="zI7-eA-tUS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateTimeLabel" destination="WVP-0g-UfE" id="Ri4-tQ-rfd"/>
                                             <outlet property="eventImage" destination="4zc-jr-yij" id="F3h-pa-w38"/>
                                             <outlet property="name" destination="LUI-eP-asc" id="92u-Oz-YXl"/>
+                                            <outlet property="venueLabel" destination="zON-JS-nzN" id="pTS-l9-YAL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

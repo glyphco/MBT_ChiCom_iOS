@@ -14,6 +14,8 @@ class EventCell: UITableViewCell {
     
     @IBOutlet var name: UILabel!
     @IBOutlet var eventImage: UIImageView!
+    @IBOutlet var venueLabel: UILabel!
+    @IBOutlet var dateTimeLabel: UILabel!
     
     var event:NSDictionary? {
         didSet {
@@ -21,6 +23,10 @@ class EventCell: UITableViewCell {
                 return
             }
             name.text = event.value(forKey: "name") as? String
+            venueLabel.text = event.value(forKey: "venue_name") as? String ?? "No venue"
+            let startTime = (event.value(forKey: "localstarttime") as? String) ?? ""
+            let startDate = (event.value(forKey: "localstartdate") as? String) ?? ""
+            dateTimeLabel.text = "\(startDate) \(startTime)"
             
             if let imageUrl = event.value(forKey: "imageSm") as? String, !imageUrl.isEmpty {
                 self.getEventImage(url: imageUrl)

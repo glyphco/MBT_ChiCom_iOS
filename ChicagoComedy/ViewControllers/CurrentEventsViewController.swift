@@ -17,6 +17,8 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        table.estimatedRowHeight = 100
+        table.rowHeight = UITableViewAutomaticDimension
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,9 +57,9 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 81
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 81
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "ShowEventDetail", sender: events[indexPath.row])
