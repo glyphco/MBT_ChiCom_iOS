@@ -18,6 +18,7 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet var eventDescriptionTextView: UITextView!
     @IBOutlet var viewHeightContraint: NSLayoutConstraint!
     @IBOutlet var contentView: UIView!
+    @IBOutlet var descriptionView: UIView!
     @IBOutlet var venueLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     var event: NSDictionary?
@@ -38,6 +39,7 @@ class EventDetailsViewController: UIViewController {
         addressLabel.text = event?.value(forKey: "street_address") as? String
         eventDescriptionTextView.text = event?.value(forKey: "description") as? String
         eventDescriptionTextView.sizeToFit()
+        descriptionView.frame.size.height = eventDescriptionTextView.frame.size.height
         if let imageUrl = event?.value(forKey: "imageSm") as? String {
             setEventImage(url: imageUrl)
         }

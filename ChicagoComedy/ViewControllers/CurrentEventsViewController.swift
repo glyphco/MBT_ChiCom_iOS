@@ -35,7 +35,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEventDetail" {
-            if let eventViewController = segue.destination as? EventDetailsViewController {
+            if let eventViewController = segue.destination as? EventDetailsTableViewController {
                 eventViewController.event = sender as? NSDictionary
             }
         }
