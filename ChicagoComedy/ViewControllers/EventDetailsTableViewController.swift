@@ -12,11 +12,12 @@ import Alamofire
 import PromiseKit
 
 class EventDetailsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet var tableView: UITableView!
     var event: NSDictionary?
     var descriptionHeight = CGFloat(100)
     
     override func viewDidLoad() {
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,15 +45,22 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventInfoCell", for: indexPath) as? EventInfoCell else {
                 fatalError("Could not setup event header")
             }
+            
             let price = event?.value(forKey: "priceWord") as? String ?? ""
             let priceMinMax = event?.value(forKey: "priceMinMax") as? String ?? ""
-            cell.priceLabel.text = "\(price) \(priceMinMax)"
+            let priceString = [price, priceMinMax].joined(separator: " ")
+            if(!price.isEmpty || !priceMinMax.isEmpty){
+                cell.priceLabel.text = priceString.trimmingCharacters(in: .whitespaces)
+                cell.priceView.isHidden = false
+            } else {
+                cell.priceView.isHidden = true
+            }
             return cell
         default: //description
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventDescriptionCell", for: indexPath) as? EventDescriptionCell else {
                 fatalError("Could not setup event description")
             }
-            if let description = event?.value(forKey: "description") as? String, description != nil, !description.isEmpty {
+            if let description = event?.value(forKey: "description") as? String, !description.isEmpty {
                 cell.eventDescriptionTextView.text = description
             } else {
                cell.eventDescriptionTextView.text = "No description available."
@@ -75,7 +83,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
             return 192

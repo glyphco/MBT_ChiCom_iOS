@@ -11,6 +11,7 @@ import UIKit
 
 class EventInfoCell: UITableViewCell {
     @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var priceView: UIViewBorder!
     
     
 }

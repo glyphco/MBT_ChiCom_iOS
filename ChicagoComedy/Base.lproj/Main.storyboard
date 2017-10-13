@@ -152,6 +152,7 @@
                                                 <constraint firstItem="vWx-oK-esr" firstAttribute="leading" secondItem="wnv-kd-ewi" secondAttribute="trailing" constant="16" id="LwB-A6-Do3"/>
                                                 <constraint firstItem="Eqe-1J-SbS" firstAttribute="trailing" secondItem="gF8-Xj-pit" secondAttribute="trailingMargin" id="Y0q-Xe-AzO"/>
                                                 <constraint firstItem="Eqe-1J-SbS" firstAttribute="leading" secondItem="wnv-kd-ewi" secondAttribute="trailing" constant="16" id="hFZ-Xb-YAx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wnv-kd-ewi" secondAttribute="bottom" constant="24" id="jmG-hh-PUb"/>
                                                 <constraint firstItem="SdF-zo-yqT" firstAttribute="leading" secondItem="wnv-kd-ewi" secondAttribute="trailing" constant="16" id="mLF-AL-VU3"/>
                                                 <constraint firstItem="vWx-oK-esr" firstAttribute="top" secondItem="4jL-7d-PZH" secondAttribute="bottom" constant="8" id="vF8-PP-zEk"/>
                                             </constraints>
@@ -164,15 +165,15 @@
                                             <outlet property="startTimeLabel" destination="Eqe-1J-SbS" id="UTo-Yb-0oq"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventInfoCell" rowHeight="187" id="Rox-Fj-T6L" customClass="EventInfoCell" customModule="ChicagoComedy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="230" width="375" height="187"/>
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventInfoCell" rowHeight="159" id="Rox-Fj-T6L" customClass="EventInfoCell" customModule="ChicagoComedy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="230" width="375" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rox-Fj-T6L" id="1Ie-P6-I6j">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aji-Hl-iS5" customClass="CardView" customModule="ChicagoComedy" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="359" height="171"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="143"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-yy-uM9">
                                                             <rect key="frame" x="16" y="16" width="327" height="19.5"/>
@@ -180,30 +181,48 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQt-Lt-Wyi">
-                                                            <rect key="frame" x="16" y="47.5" width="327" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPN-9p-TAk">
-                                                            <rect key="frame" x="16" y="73.5" width="327" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbK-7C-Esc" customClass="UIViewBorder" customModule="ChicagoComedy" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="47.5" width="359" height="95.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgL-Gp-UOe">
+                                                                    <rect key="frame" x="16" y="8" width="327" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="$5" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPN-9p-TAk">
+                                                                    <rect key="frame" x="16" y="34" width="327" height="53.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="SPN-9p-TAk" secondAttribute="trailing" constant="16" id="0yR-iJ-unS"/>
+                                                                <constraint firstAttribute="bottom" secondItem="SPN-9p-TAk" secondAttribute="bottom" constant="8" id="AxU-3j-toQ"/>
+                                                                <constraint firstItem="SPN-9p-TAk" firstAttribute="leading" secondItem="JbK-7C-Esc" secondAttribute="leading" constant="16" id="SXA-3B-kHD"/>
+                                                                <constraint firstItem="SPN-9p-TAk" firstAttribute="top" secondItem="zgL-Gp-UOe" secondAttribute="bottom" constant="8" id="WoU-kR-gv6"/>
+                                                                <constraint firstItem="zgL-Gp-UOe" firstAttribute="leading" secondItem="JbK-7C-Esc" secondAttribute="leading" constant="16" id="fZq-zz-tew"/>
+                                                                <constraint firstItem="zgL-Gp-UOe" firstAttribute="top" secondItem="JbK-7C-Esc" secondAttribute="top" constant="8" id="fuj-U0-Zmn"/>
+                                                                <constraint firstAttribute="trailing" secondItem="zgL-Gp-UOe" secondAttribute="trailing" constant="16" id="hzc-4P-hT5"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.90980392160000001" green="0.91764705879999997" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="tQt-Lt-Wyi" firstAttribute="top" secondItem="cxN-yy-uM9" secondAttribute="bottom" constant="12" id="1Iy-xD-e79"/>
                                                         <constraint firstItem="cxN-yy-uM9" firstAttribute="top" secondItem="Aji-Hl-iS5" secondAttribute="top" constant="16" id="4tP-68-o6G"/>
-                                                        <constraint firstItem="SPN-9p-TAk" firstAttribute="top" secondItem="tQt-Lt-Wyi" secondAttribute="bottom" constant="8" id="8ql-fv-s1D"/>
                                                         <constraint firstItem="cxN-yy-uM9" firstAttribute="leading" secondItem="Aji-Hl-iS5" secondAttribute="leading" constant="16" id="EZx-iV-Hd8"/>
-                                                        <constraint firstItem="tQt-Lt-Wyi" firstAttribute="leading" secondItem="Aji-Hl-iS5" secondAttribute="leading" constant="16" id="FKE-cu-Cxd"/>
-                                                        <constraint firstItem="SPN-9p-TAk" firstAttribute="leading" secondItem="Aji-Hl-iS5" secondAttribute="leading" constant="16" id="Kho-bt-yQE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JbK-7C-Esc" secondAttribute="trailing" id="H8e-nM-JzE"/>
                                                         <constraint firstAttribute="trailing" secondItem="cxN-yy-uM9" secondAttribute="trailing" constant="16" id="XlI-Ud-mED"/>
-                                                        <constraint firstAttribute="trailing" secondItem="SPN-9p-TAk" secondAttribute="trailing" constant="16" id="epN-Gx-74c"/>
-                                                        <constraint firstAttribute="trailing" secondItem="tQt-Lt-Wyi" secondAttribute="trailing" constant="16" id="g8b-hb-s4L"/>
+                                                        <constraint firstItem="JbK-7C-Esc" firstAttribute="leading" secondItem="Aji-Hl-iS5" secondAttribute="leading" id="eXY-tP-TY8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JbK-7C-Esc" secondAttribute="bottom" id="fEJ-xd-nft"/>
+                                                        <constraint firstItem="JbK-7C-Esc" firstAttribute="top" secondItem="cxN-yy-uM9" secondAttribute="bottom" constant="12" id="xD8-lz-IK2"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -234,10 +253,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="priceLabel" destination="SPN-9p-TAk" id="qfa-u4-Xft"/>
+                                            <outlet property="priceView" destination="JbK-7C-Esc" id="6mV-Tu-61n"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventDescriptionCell" rowHeight="134" id="V5q-Nw-Z32" customClass="EventDescriptionCell" customModule="ChicagoComedy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="417" width="375" height="134"/>
+                                        <rect key="frame" x="0.0" y="389" width="375" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V5q-Nw-Z32" id="kNU-AK-Nnl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
@@ -247,7 +267,7 @@
                                                     <rect key="frame" x="8" y="0.0" width="359" height="126"/>
                                                     <subviews>
                                                         <textView multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdw-g7-DgM" customClass="UITextViewFixed" customModule="ChicagoComedy" customModuleProvider="target">
-                                                            <rect key="frame" x="16" y="47.5" width="327" height="20"/>
+                                                            <rect key="frame" x="16" y="47.5" width="327" height="62.5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Lorem ipsum dolor">
@@ -270,6 +290,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="sdw-g7-DgM" secondAttribute="bottom" constant="16" id="0Cm-aM-uTe"/>
                                                         <constraint firstItem="sdw-g7-DgM" firstAttribute="top" secondItem="Ere-R2-URm" secondAttribute="bottom" constant="12" id="D5K-uX-cAO"/>
                                                         <constraint firstItem="Ere-R2-URm" firstAttribute="top" secondItem="W8n-Da-ozW" secondAttribute="top" constant="16" id="Oy5-iM-nkW"/>
                                                         <constraint firstItem="sdw-g7-DgM" firstAttribute="leading" secondItem="W8n-Da-ozW" secondAttribute="leading" constant="16" id="ZJS-sg-bWZ"/>
@@ -279,7 +300,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="1"/>
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
                                                             <integer key="value" value="0"/>
@@ -324,10 +345,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="guw-6b-hcd"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Uqi-Ds-0I7" id="FpF-DK-1GI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEP-lw-Bss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="-291"/>
+            <point key="canvasLocation" x="1208.8" y="-291.00449775112446"/>
         </scene>
         <!--Event Details View Controller-->
         <scene sceneID="8xD-6e-voC">
