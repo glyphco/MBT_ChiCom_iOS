@@ -19,7 +19,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -45,16 +45,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventInfoCell", for: indexPath) as? EventInfoCell else {
                 fatalError("Could not setup event header")
             }
-            
-            let price = event?.value(forKey: "priceWord") as? String ?? ""
-            let priceMinMax = event?.value(forKey: "priceMinMax") as? String ?? ""
-            let priceString = [price, priceMinMax].joined(separator: " ")
-            if(!price.isEmpty || !priceMinMax.isEmpty){
-                cell.priceLabel.text = priceString.trimmingCharacters(in: .whitespaces)
-                cell.priceView.isHidden = false
-            } else {
-                cell.priceView.isHidden = true
-            }
+            cell.event = event
             return cell
         default: //description
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventDescriptionCell", for: indexPath) as? EventDescriptionCell else {
