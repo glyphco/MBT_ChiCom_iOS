@@ -8,8 +8,6 @@
 
 import Foundation
 import UIKit
-import Alamofire
-//import AlamofireIamge
 
 class EventDetailsViewController: UIViewController {
     
@@ -41,17 +39,17 @@ class EventDetailsViewController: UIViewController {
         eventDescriptionTextView.sizeToFit()
         descriptionView.frame.size.height = eventDescriptionTextView.frame.size.height
         if let imageUrl = event?.value(forKey: "imageSm") as? String {
-            setEventImage(url: imageUrl)
+            setEventImage(imageUrl: imageUrl)
         }
         let newHeight = getContentHeight()
         viewHeightContraint.constant = newHeight
     }
     
-    func setEventImage(url: String){
-        Alamofire.request(url).responseData { response in
-            if let eventPicture = response.result.value {
-                self.eventImage.image = UIImage(data: eventPicture)
-            }
+    func setEventImage(imageUrl: String){
+        ImageCacheManager.shared.getImage(url: imageUrl).then { image -> Void in
+            self.eventImage.image = image
+        }.catch {error in
+            print(error)
         }
     }
     

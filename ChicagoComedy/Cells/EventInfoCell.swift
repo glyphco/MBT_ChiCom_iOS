@@ -21,6 +21,7 @@ class EventInfoCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource
             guard let event = event else {
                 return
             }
+            numRows = 0
             table.dataSource = self
             table.delegate = self
             table.estimatedRowHeight = 60

@@ -11,7 +11,7 @@ import UIKit
 
 class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     var events:[NSDictionary] = []
-    
+
     @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
@@ -53,6 +53,15 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         }
         let event = events[indexPath.row]
         cell.event = event
+        if let imageUrl = event.value(forKey: "imageSm") as? String, !imageUrl.isEmpty {
+            ImageCacheManager.shared.getImage(url: imageUrl).then { image -> Void in
+                cell.eventImage.image = image
+            }.catch {error in
+                print(error)
+            }
+        } else {
+            cell.eventImage.image = UIImage()
+        }
         
         return cell
     }

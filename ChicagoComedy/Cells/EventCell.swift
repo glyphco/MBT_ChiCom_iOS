@@ -27,20 +27,6 @@ class EventCell: UITableViewCell {
             let startTime = (event.value(forKey: "localstarttime") as? String) ?? ""
             let startDate = (event.value(forKey: "localstartdate") as? String) ?? ""
             dateTimeLabel.text = "\(startDate) \(startTime)"
-            
-            if let imageUrl = event.value(forKey: "imageSm") as? String, !imageUrl.isEmpty {
-                self.getEventImage(url: imageUrl)
-            } else {
-                self.eventImage.image = UIImage()
-            }
-        }
-    }
-    
-    func getEventImage(url: String) {
-        Alamofire.request(url).responseData { response in
-            if let eventPicture = response.result.value {
-                self.eventImage.image = UIImage(data: eventPicture)
-            }
         }
     }
 }

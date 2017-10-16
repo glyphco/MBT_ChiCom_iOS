@@ -30,10 +30,14 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventHeaderCell", for: indexPath) as? EventHeaderCell else {
                 fatalError("Could not setup event header")
             }
-            let imageLink = event?.value(forKey: "imageLg") as? String
-            setEventImage(url: imageLink ?? "").then { image -> Void in
-                cell.eventImageView.image = image
+            if let imageLink = event?.value(forKey: "imageSm") as? String, !imageLink.isEmpty {
+                ImageCacheManager.shared.getImage(url: imageLink).then { image -> Void in
+                    cell.eventImageView.image = image
+                }.catch { error in
+                    print(error)
+                }
             }
+            
             cell.eventNameLabel.text = event?.value(forKey: "name") as? String
             cell.eventVenueLabel.text = event?.value(forKey: "venue_name") as? String
             cell.eventAddressLabel.text = event?.value(forKey: "street_address") as? String
@@ -59,18 +63,6 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             cell.eventDescriptionTextView.sizeToFit()
             self.descriptionHeight = cell.eventDescriptionTextView.frame.size.height + 46
             return cell
-        }
-    }
-    
-    func setEventImage(url: String) -> Promise<UIImage> {
-        return Promise { fulfill, reject in
-            Alamofire.request(url).responseData { response in
-                if let eventPicture = response.result.value {
-                    fulfill(UIImage(data: eventPicture)!)
-                } else {
-                    fulfill(UIImage())
-                }
-            }
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A14167E1F953A4800A9F651 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14167D1F953A4800A9F651 /* ImageCacheManager.swift */; };
 		1A57C5F71F881405007D2BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F61F881405007D2BD7 /* AppDelegate.swift */; };
 		1A57C5F91F881405007D2BD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F81F881405007D2BD7 /* ViewController.swift */; };
 		1A57C5FC1F881405007D2BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A57C5FA1F881405007D2BD7 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		007AEA1E5916E1AA47E203B6 /* Pods-ChicagoComedyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedyTests/Pods-ChicagoComedyTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A14167D1F953A4800A9F651 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		1A57C5F31F881405007D2BD7 /* ChicagoComedy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChicagoComedy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A57C5F61F881405007D2BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A57C5F81F881405007D2BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				1A57C62B1F881A63007D2BD7 /* EventAPIClient.swift */,
+				1A14167D1F953A4800A9F651 /* ImageCacheManager.swift */,
 			);
 			path = DataControllers;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				1A57C6451F91575D007D2BD7 /* UITableViewBorder.swift in Sources */,
 				1A57C62E1F88237B007D2BD7 /* EventDetailsViewControlelr.swift in Sources */,
 				1A57C62C1F881A63007D2BD7 /* EventAPIClient.swift in Sources */,
+				1A14167E1F953A4800A9F651 /* ImageCacheManager.swift in Sources */,
 				1A57C6291F881812007D2BD7 /* EventCell.swift in Sources */,
 				1A57C6341F8FE28A007D2BD7 /* EventHeaderCell.swift in Sources */,
 				1A57C6261F881757007D2BD7 /* CurrentEventsViewController.swift in Sources */,
