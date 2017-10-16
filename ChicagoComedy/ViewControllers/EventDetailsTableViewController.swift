@@ -36,6 +36,8 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
                 }.catch { error in
                     print(error)
                 }
+            } else {
+                cell.eventImageView.image = UIImage(named: "event-default")
             }
             
             cell.eventNameLabel.text = event?.value(forKey: "name") as? String
