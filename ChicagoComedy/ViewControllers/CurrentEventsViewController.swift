@@ -60,7 +60,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
                 print(error)
             }
         } else {
-            cell.eventImage.image = UIImage(named: "event-default")
+            cell.eventImage.image = UIImage()
         }
         
         return cell

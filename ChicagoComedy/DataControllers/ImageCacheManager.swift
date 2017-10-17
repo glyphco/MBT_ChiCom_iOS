@@ -23,7 +23,6 @@ class ImageCacheManager {
     func getImage(url: String)->Promise<UIImage> {
         return Promise {fulfill, reject in
             if let cachedVersion = cache.object(forKey: url as NSString) {
-                print("Just pullef from cache")
                 fulfill(cachedVersion)
             } else {
                 Alamofire.request(url).responseData { response in
