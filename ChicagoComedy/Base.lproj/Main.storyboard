@@ -145,6 +145,7 @@
                     <connections>
                         <outlet property="table" destination="uTD-DB-uuq" id="IYE-lO-n5D"/>
                         <segue destination="G4C-wc-wvj" kind="show" identifier="ShowEventDetail" id="L7p-I0-feZ"/>
+                        <segue destination="kgx-jw-Q91" kind="show" identifier="ShowAboutUs" id="okV-Sn-ITW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPW-q5-Nbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,12 +172,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wnv-kd-ewi">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wnv-kd-ewi">
                                                     <rect key="frame" x="24" y="28" width="112" height="142"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="112" id="YCg-ER-igR"/>
                                                         <constraint firstAttribute="height" constant="142" id="s7W-mN-FQM"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="dHx-bE-vpG" appends="YES" id="Pdu-bE-jM7"/>
+                                                    </connections>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event name is here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-zo-yqT">
                                                     <rect key="frame" x="152" y="43" width="199" height="21"/>
@@ -431,11 +436,48 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Uqi-Ds-0I7" id="FpF-DK-1GI"/>
+                        <segue destination="KfO-9M-VXh" kind="presentation" identifier="ShowOriginalImage" modalPresentationStyle="overCurrentContext" id="HNc-0U-SH7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEP-lw-Bss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dHx-bE-vpG">
+                    <connections>
+                        <action selector="imageTapped:" destination="G4C-wc-wvj" id="2cW-7S-sKh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1545" y="-293"/>
+        </scene>
+        <!--Image Container View Controller-->
+        <scene sceneID="uaJ-su-s12">
+            <objects>
+                <viewController id="KfO-9M-VXh" customClass="ImageContainerViewController" customModule="ChicagoComedy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Luf-Pi-duU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Jr-G7-qcc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <connections>
+                                    <segue destination="bed-fq-Yag" kind="embed" id="xA6-Jn-0Zo"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8Jr-G7-qcc" firstAttribute="top" secondItem="Luf-Pi-duU" secondAttribute="top" id="HB7-YR-vs0"/>
+                            <constraint firstItem="8Jr-G7-qcc" firstAttribute="leading" secondItem="Vs9-H5-weL" secondAttribute="leading" id="eZf-ki-DJM"/>
+                            <constraint firstItem="8Jr-G7-qcc" firstAttribute="trailing" secondItem="Vs9-H5-weL" secondAttribute="trailing" id="hvL-Ne-QCj"/>
+                            <constraint firstItem="8Jr-G7-qcc" firstAttribute="bottom" secondItem="Vs9-H5-weL" secondAttribute="bottom" id="tK6-v8-tpz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vs9-H5-weL"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="8Jr-G7-qcc" id="rob-yl-qdO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXe-vC-NmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397.5999999999999" y="-291.00449775112446"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="hhm-pg-5a6">
@@ -588,7 +630,6 @@
                     </toolbar>
                     <connections>
                         <segue destination="fjt-09-h4U" kind="relationship" relationship="rootViewController" id="fN0-hc-Whq"/>
-                        <segue destination="kgx-jw-Q91" kind="show" identifier="ShowAboutUs" id="IRL-WN-eNz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9i-IC-lzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -638,7 +679,43 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aU4-mb-8K2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19.5" y="-1038.5"/>
+            <point key="canvasLocation" x="1545" y="-958"/>
+        </scene>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="kLL-3H-i4D">
+            <objects>
+                <viewController id="bed-fq-Yag" customClass="ImageViewerViewController" customModule="ChicagoComedy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pSZ-zE-XZs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TjZ-lo-m3b">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="p5d-5f-GZY">
+                                <rect key="frame" x="177.5" y="313.5" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TjZ-lo-m3b" firstAttribute="leading" secondItem="pSZ-zE-XZs" secondAttribute="leading" id="DEH-3d-rtw"/>
+                            <constraint firstItem="p5d-5f-GZY" firstAttribute="centerX" secondItem="pSZ-zE-XZs" secondAttribute="centerX" id="Dqt-vp-gKI"/>
+                            <constraint firstItem="p5d-5f-GZY" firstAttribute="centerY" secondItem="pSZ-zE-XZs" secondAttribute="centerY" id="OY0-8l-cVm"/>
+                            <constraint firstItem="TjZ-lo-m3b" firstAttribute="top" secondItem="pSZ-zE-XZs" secondAttribute="top" id="Smb-qZ-lp6"/>
+                            <constraint firstAttribute="bottom" secondItem="TjZ-lo-m3b" secondAttribute="bottom" id="UsO-YC-Nrr"/>
+                            <constraint firstAttribute="trailing" secondItem="TjZ-lo-m3b" secondAttribute="trailing" id="W0k-OW-nDc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="TjZ-lo-m3b" id="fvr-BQ-pA9"/>
+                        <outlet property="loadingIdicator" destination="p5d-5f-GZY" id="SYo-5M-9nl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKR-kF-WkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3308" y="-294"/>
         </scene>
     </scenes>
     <resources>

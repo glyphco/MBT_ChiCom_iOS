@@ -22,6 +22,11 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         table.estimatedRowHeight = 100
         table.rowHeight = UITableViewAutomaticDimension
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showAboutUs),
+                                               name: NSNotification.Name("ShowAboutUs"),
+                                               object: nil)
+        
         let logo = UIImage(named: "mbtlogo.png")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
@@ -37,6 +42,10 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         getEvents()
+    }
+    
+    @objc func showAboutUs(){
+        performSegue(withIdentifier: "ShowAboutUs", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,7 +77,6 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     @IBAction func menuWasTapped(_ sender: Any) {
-        print("was tapped")
         NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
     

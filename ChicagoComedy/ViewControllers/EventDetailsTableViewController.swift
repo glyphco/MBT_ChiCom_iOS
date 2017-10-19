@@ -19,9 +19,20 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
+    }
+    
+    
+    @IBAction func imageTapped(_ sender: Any) {
+        performSegue(withIdentifier: "ShowOriginalImage", sender: self.event)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? ImageContainerViewController {
+            controller.event = event
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

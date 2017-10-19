@@ -15,5 +15,4 @@ class EventHeaderCell: UITableViewCell {
     @IBOutlet var eventVenueLabel: UILabel!
     @IBOutlet var eventAddressLabel: UILabel!
     @IBOutlet var startTimeLabel: UILabel!
-    
 }

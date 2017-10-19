@@ -14,13 +14,6 @@ class RootNavigationController: UINavigationController {
 //        UIApplication.shared.statusBarStyle = .lightContent
 //        //UIApplication.shared.isStatusBarHidden = true
 //        print("wass uppppp")
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(showAboutUs),
-                                               name: NSNotification.Name("ShowAboutUs"),
-                                               object: nil)
-    }
-    
-    @objc func showAboutUs(){
-        performSegue(withIdentifier: "ShowAboutUs", sender: nil)
+        
     }
 }

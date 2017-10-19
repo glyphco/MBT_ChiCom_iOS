@@ -10,6 +10,9 @@
 		1A14167E1F953A4800A9F651 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14167D1F953A4800A9F651 /* ImageCacheManager.swift */; };
 		1A1416801F9681CD00A9F651 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14167F1F9681CD00A9F651 /* ContainerViewController.swift */; };
 		1A1416821F97D87800A9F651 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1416811F97D87800A9F651 /* MenuViewController.swift */; };
+		1A2469F11F9922EC0026045E /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F01F9922EC0026045E /* ImageViewerViewController.swift */; };
+		1A2469F31F9927C30026045E /* ViewControllerPannable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F21F9927C30026045E /* ViewControllerPannable.swift */; };
+		1A2469F51F99337D0026045E /* ImageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F41F99337D0026045E /* ImageContainerViewController.swift */; };
 		1A57C5F71F881405007D2BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F61F881405007D2BD7 /* AppDelegate.swift */; };
 		1A57C5F91F881405007D2BD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F81F881405007D2BD7 /* ViewController.swift */; };
 		1A57C5FC1F881405007D2BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A57C5FA1F881405007D2BD7 /* Main.storyboard */; };
@@ -58,6 +61,9 @@
 		1A14167D1F953A4800A9F651 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		1A14167F1F9681CD00A9F651 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		1A1416811F97D87800A9F651 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1A2469F01F9922EC0026045E /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		1A2469F21F9927C30026045E /* ViewControllerPannable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPannable.swift; sourceTree = "<group>"; };
+		1A2469F41F99337D0026045E /* ImageContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerViewController.swift; sourceTree = "<group>"; };
 		1A57C5F31F881405007D2BD7 /* ChicagoComedy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChicagoComedy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A57C5F61F881405007D2BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A57C5F81F881405007D2BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 				1A57C6311F8FCD80007D2BD7 /* EventDetailsTableViewController.swift */,
 				1A14167F1F9681CD00A9F651 /* ContainerViewController.swift */,
 				1A1416811F97D87800A9F651 /* MenuViewController.swift */,
+				1A2469F01F9922EC0026045E /* ImageViewerViewController.swift */,
+				1A2469F41F99337D0026045E /* ImageContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 				1A57C63E1F9122A2007D2BD7 /* UITextViewFixed.swift */,
 				1A57C6401F913DF0007D2BD7 /* UIViewBorder.swift */,
 				1A57C6441F91575D007D2BD7 /* UITableViewBorder.swift */,
+				1A2469F21F9927C30026045E /* ViewControllerPannable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -535,6 +544,7 @@
 				1A57C62C1F881A63007D2BD7 /* EventAPIClient.swift in Sources */,
 				1A14167E1F953A4800A9F651 /* ImageCacheManager.swift in Sources */,
 				1A57C6291F881812007D2BD7 /* EventCell.swift in Sources */,
+				1A2469F51F99337D0026045E /* ImageContainerViewController.swift in Sources */,
 				1A57C6341F8FE28A007D2BD7 /* EventHeaderCell.swift in Sources */,
 				1A57C6261F881757007D2BD7 /* CurrentEventsViewController.swift in Sources */,
 				1A57C63F1F9122A2007D2BD7 /* UITextViewFixed.swift in Sources */,
@@ -546,7 +556,9 @@
 				1A1416821F97D87800A9F651 /* MenuViewController.swift in Sources */,
 				1A57C63B1F90115F007D2BD7 /* CardView.swift in Sources */,
 				1A57C6381F8FF316007D2BD7 /* EventDescriptionCell.swift in Sources */,
+				1A2469F31F9927C30026045E /* ViewControllerPannable.swift in Sources */,
 				1A1416801F9681CD00A9F651 /* ContainerViewController.swift in Sources */,
+				1A2469F11F9922EC0026045E /* ImageViewerViewController.swift in Sources */,
 				1A57C6431F914930007D2BD7 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

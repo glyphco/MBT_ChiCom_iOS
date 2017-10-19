@@ -20,7 +20,7 @@ class ImageCacheManager {
         cache.totalCostLimit = 100
     }
     
-    func getImage(url: String)->Promise<UIImage> {
+    func getImage(url: String, cost:Int=1)->Promise<UIImage> {
         return Promise {fulfill, reject in
             if let cachedVersion = cache.object(forKey: url as NSString) {
                 fulfill(cachedVersion)
@@ -28,7 +28,7 @@ class ImageCacheManager {
                 Alamofire.request(url).responseData { response in
                     if let eventPicture = response.result.value {
                         if let picture = UIImage(data: eventPicture) {
-                            self.cache.setObject(picture, forKey: url as NSString, cost: 1)
+                            self.cache.setObject(picture, forKey: url as NSString, cost: cost)
                             fulfill(picture)
                         } else {
                             //image data not correct
