@@ -14,8 +14,8 @@ class Event: Mappable {
     var description:String?
     var venueName:String?
     var streetAddress:String?
-    var lat:Double?
-    var lng:Double?
+    var lat:String?
+    var lng:String?
     var imageUrl:String?
     var imageIcon:String?
     var imageSm:String?

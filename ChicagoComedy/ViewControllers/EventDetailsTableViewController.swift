@@ -14,7 +14,7 @@ import MapKit
 
 class EventDetailsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
-    var event: NSDictionary?
+    var event: Event?
     var descriptionHeight = CGFloat(100)
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
     }
     
     @IBAction func mapButtonTapped(_ sender: Any) {
-        if let lat = event?.value(forKey: "lat") as? String, let lng = event?.value(forKey: "lng") as? String,
+        if let lat = event?.lat, let lng = event?.lng,
             !lat.isEmpty, !lng.isEmpty, let latitude = Double(lat), let longitude = Double(lng)  {
             openMapForPlace(lat: latitude, lng: longitude)
         }
@@ -49,7 +49,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventHeaderCell", for: indexPath) as? EventHeaderCell else {
                 fatalError("Could not setup event header")
             }
-            if let imageLink = event?.value(forKey: "imageSm") as? String, !imageLink.isEmpty {
+            if let imageLink = event?.imageSm, !imageLink.isEmpty {
                 ImageCacheManager.shared.getImage(url: imageLink).then { image -> Void in
                     cell.eventImageView.image = image
                 }.catch { error in
@@ -59,9 +59,9 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
                 cell.eventImageView.image = UIImage(named: "event-default")
             }
             
-            cell.eventNameLabel.text = event?.value(forKey: "name") as? String
-            cell.eventVenueLabel.text = event?.value(forKey: "venue_name") as? String
-            cell.eventAddressLabel.text = event?.value(forKey: "street_address") as? String
+            cell.eventNameLabel.text = event?.name
+            cell.eventVenueLabel.text = event?.venueName
+            cell.eventAddressLabel.text = event?.streetAddress
             return cell
         case 1: //details
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventInfoCell", for: indexPath) as? EventInfoCell else {
@@ -73,7 +73,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventDescriptionCell", for: indexPath) as? EventDescriptionCell else {
                 fatalError("Could not setup event description")
             }
-            if let description = event?.value(forKey: "description") as? String, !description.isEmpty {
+            if let description = event?.description, !description.isEmpty {
                 cell.eventDescriptionTextView.text = description
             } else {
                cell.eventDescriptionTextView.text = "No description available."
@@ -109,7 +109,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = event?.value(forKey: "venue_name") as? String
+        mapItem.name = event?.venueName
         mapItem.openInMaps(launchOptions: options)
     }
     

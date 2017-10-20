@@ -19,26 +19,23 @@ class EventCell: UITableViewCell {
     @IBOutlet var dayLabel: UILabel!
     @IBOutlet var startTimeLabel: UILabel!
     
-    var event:NSDictionary? {
+    var event:Event? {
         didSet {
             guard let event = event else {
                 return
             }
-            name.text = event.value(forKey: "name") as? String
-            venueLabel.text = event.value(forKey: "venue_name") as? String ?? "No venue"
-            let startTime = (event.value(forKey: "localstarttime") as? String) ?? ""
-            let startDate = (event.value(forKey: "localstartdate") as? String) ?? ""
+            name.text = event.name
+            venueLabel.text = event.venueName ?? "No venue"
+            let startTime = event.localStartTime ?? ""
+            let startDate = event.localStartDate ?? ""
             dateTimeLabel.text = "\(startDate) \(startTime)"
             
-            if let startDateTime = event.value(forKey: "local_start") as? String, !startDateTime.isEmpty {
+            if let startDateTime = event.localStart {
                 let theFormatter = DateFormatter()
-                theFormatter.timeZone = TimeZone(identifier: "America/Chicago")
-                theFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                let date = theFormatter.date(from: startDateTime)
                 theFormatter.dateFormat = "E"
-                let day = theFormatter.string(from: date!)
+                let day = theFormatter.string(from: startDateTime)
                 theFormatter.dateFormat = "h:mma"
-                let time = theFormatter.string(from: date!)
+                let time = theFormatter.string(from: startDateTime)
                 dayLabel.text = day
                 startTimeLabel.text = time
             }

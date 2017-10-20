@@ -11,7 +11,7 @@ import UIKit
 
 class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
-    var events:[NSDictionary] = []
+    var events:[Event] = []
     var refreshControl = UIRefreshControl()
     
     @IBOutlet var table: UITableView!
@@ -51,7 +51,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEventDetail" {
             if let eventViewController = segue.destination as? EventDetailsTableViewController {
-                eventViewController.event = sender as? NSDictionary
+                eventViewController.event = sender as? Event
             }
         }
     }
@@ -90,7 +90,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         }
         let event = events[indexPath.row]
         cell.event = event
-        if let imageUrl = event.value(forKey: "imageSm") as? String, !imageUrl.isEmpty {
+        if let imageUrl = event.imageSm, !imageUrl.isEmpty {
             ImageCacheManager.shared.getImage(url: imageUrl).then { image -> Void in
                 cell.eventImage.image = image
             }.catch {error in

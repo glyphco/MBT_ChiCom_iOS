@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ImageContainerViewController: UIViewController {
-    var event: NSDictionary?
+    var event: Event?
     @IBOutlet var containerView: UIView!
     var panGestureRecognizer: UIPanGestureRecognizer?
     var originalPosition: CGPoint?

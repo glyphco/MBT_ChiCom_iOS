@@ -25,8 +25,10 @@ class ImageCacheManager {
             if let cachedVersion = cache.object(forKey: url as NSString) {
                 fulfill(cachedVersion)
             } else {
-                Alamofire.request(url).responseData { response in
-                    if let eventPicture = response.result.value {
+                Alamofire.request(url).validate().responseData { response in
+                    if let error = response.result.error {
+                        reject(error)
+                    } else if let eventPicture = response.result.value {
                         if let picture = UIImage(data: eventPicture) {
                             self.cache.setObject(picture, forKey: url as NSString, cost: cost)
                             fulfill(picture)
@@ -34,6 +36,8 @@ class ImageCacheManager {
                             //image data not correct
                             reject(NSError(domain: "", code: 422, userInfo: nil))
                         }
+                    } else {
+                        reject(NSError(domain: "", code: 500, userInfo: nil))
                     }
                 }
             }

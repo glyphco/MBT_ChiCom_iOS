@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class ImageViewerViewController: UIViewController {
-    var event: NSDictionary?
+    var event: Event?
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
-        if let imageUrl = event?.value(forKey: "imageurl") as? String, !imageUrl.isEmpty {
+        if let imageUrl = event?.imageUrl, !imageUrl.isEmpty {
             getImage(imageUrl: imageUrl)
         } else {
             self.imageView.image = UIImage(named: "event-default")

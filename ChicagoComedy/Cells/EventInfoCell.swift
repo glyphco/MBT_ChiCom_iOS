@@ -16,7 +16,7 @@ class EventInfoCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource
     var numRows = 0;
     var tableData = [[String:String]]()
     
-    var event: NSDictionary? {
+    var event: Event? {
         didSet {
             guard let event = event else {
                 return
@@ -27,31 +27,31 @@ class EventInfoCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource
             table.estimatedRowHeight = 60
             table.rowHeight = UITableViewAutomaticDimension
             
-            let price = event.value(forKey: "priceWord") as? String ?? ""
-            let priceMinMax = event.value(forKey: "priceMinMax") as? String ?? ""
+            let price = event.priceWord ?? ""
+            let priceMinMax = event.priceMinMax ?? ""
             let priceString = [price, priceMinMax].joined(separator: " ")
             if(!price.isEmpty || !priceMinMax.isEmpty){
                 tableData.append(["Price":priceString.trimmingCharacters(in: .whitespaces)])
                 numRows += 1
             }
             
-            if let ages = event.value(forKey: "agesWord") as? String, !ages.isEmpty {
+            if let ages = event.agesWord, !ages.isEmpty {
                 tableData.append(["Ages":ages])
                 numRows += 1
             }
 
-            if let startDate = event.value(forKey: "localstartdate") as? String, !startDate.isEmpty {
+            if let startDate = event.localStartDate, !startDate.isEmpty {
                 var startTimeString = ""
-                if let startTime = event.value(forKey: "localstarttime") as? String, !startTime.isEmpty {
+                if let startTime = event.localStartTime, !startTime.isEmpty {
                     startTimeString = "at \(startTime)"
                 }
                 tableData.append(["Starts":"\(startDate) \(startTimeString)"])
                 numRows += 1
             }
             
-            if let endDate = event.value(forKey: "localenddate") as? String, !endDate.isEmpty {
+            if let endDate = event.localEndDate, !endDate.isEmpty {
                 var endTimeString = ""
-                if let endTime = event.value(forKey: "localendtime") as? String, !endDate.isEmpty {
+                if let endTime = event.localEndTime, !endDate.isEmpty {
                     endTimeString = "at \(endTime)"
                 }
                 tableData.append(["Ends":"\(endDate) \(endTimeString)"])
