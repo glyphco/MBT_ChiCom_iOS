@@ -14,5 +14,6 @@ class RootNavigationController: UINavigationController {
 //        UIApplication.shared.statusBarStyle = .lightContent
 //        //UIApplication.shared.isStatusBarHidden = true
 //        print("wass uppppp")
+        
     }
 }

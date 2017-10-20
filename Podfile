@@ -8,12 +8,14 @@ target 'ChicagoComedy' do
   # Pods for ChicagoComedy
   pod "PromiseKit", "~> 4.4"
   pod 'Alamofire', "~> 4.5"
+  pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git', :branch => 'swift-4'
 
   target 'ChicagoComedyTests' do
     inherit! :search_paths
     # Pods for testing
     pod "PromiseKit", "~> 4.4"
     pod 'Alamofire', "~> 4.5"
+    pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git', :branch => 'swift-4'
   end
 
   target 'ChicagoComedyUITests' do

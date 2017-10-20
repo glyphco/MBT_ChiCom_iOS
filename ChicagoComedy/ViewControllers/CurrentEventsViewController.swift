@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+    
     var events:[NSDictionary] = []
-
+    var refreshControl = UIRefreshControl()
+    
     @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
@@ -19,6 +21,18 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         // Do any additional setup after loading the view, typically from a nib.
         table.estimatedRowHeight = 100
         table.rowHeight = UITableViewAutomaticDimension
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showAboutUs),
+                                               name: NSNotification.Name("ShowAboutUs"),
+                                               object: nil)
+        
+        let logo = UIImage(named: "mbtlogo.png")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        
+        self.refreshControl.addTarget(self, action: #selector(self.refreshEvents), for: UIControlEvents.valueChanged)
+        self.table?.addSubview(refreshControl)
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,12 +41,11 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        EventAPIClient.sharedInstance.getCurrentEvents().then { result -> Void in
-            self.events = result
-            self.table.reloadData()
-        }.catch { error in
-            print(error)
-        }
+        getEvents()
+    }
+    
+    @objc func showAboutUs(){
+        performSegue(withIdentifier: "ShowAboutUs", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,6 +54,30 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
                 eventViewController.event = sender as? NSDictionary
             }
         }
+    }
+    
+    @objc func refreshEvents(sender: AnyObject?){
+        getEvents()
+    }
+    
+    func getEvents(){
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        EventAPIClient.sharedInstance.getCurrentEvents().then { result -> Void in
+            self.events = result
+            self.table.reloadData()
+        }.always {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if self.refreshControl.isRefreshing
+            {
+                self.refreshControl.endRefreshing()
+            }
+        }.catch { error in
+            print(error)
+        }
+    }
+    
+    @IBAction func menuWasTapped(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,6 +108,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "ShowEventDetail", sender: events[indexPath.row])
     }
 }
