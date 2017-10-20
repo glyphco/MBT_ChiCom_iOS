@@ -13,6 +13,8 @@
 		1A2469F11F9922EC0026045E /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F01F9922EC0026045E /* ImageViewerViewController.swift */; };
 		1A2469F31F9927C30026045E /* ViewControllerPannable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F21F9927C30026045E /* ViewControllerPannable.swift */; };
 		1A2469F51F99337D0026045E /* ImageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F41F99337D0026045E /* ImageContainerViewController.swift */; };
+		1A2469F81F9A808E0026045E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F71F9A808E0026045E /* Event.swift */; };
+		1A2469FA1F9A8F050026045E /* Date+DateParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F91F9A8F050026045E /* Date+DateParsing.swift */; };
 		1A57C5F71F881405007D2BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F61F881405007D2BD7 /* AppDelegate.swift */; };
 		1A57C5F91F881405007D2BD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F81F881405007D2BD7 /* ViewController.swift */; };
 		1A57C5FC1F881405007D2BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A57C5FA1F881405007D2BD7 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		1A2469F01F9922EC0026045E /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		1A2469F21F9927C30026045E /* ViewControllerPannable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPannable.swift; sourceTree = "<group>"; };
 		1A2469F41F99337D0026045E /* ImageContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerViewController.swift; sourceTree = "<group>"; };
+		1A2469F71F9A808E0026045E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1A2469F91F9A8F050026045E /* Date+DateParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateParsing.swift"; sourceTree = "<group>"; };
 		1A57C5F31F881405007D2BD7 /* ChicagoComedy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChicagoComedy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A57C5F61F881405007D2BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A57C5F81F881405007D2BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2469F61F9A80770026045E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A2469F71F9A808E0026045E /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1A57C5EA1F881404007D2BD7 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +166,7 @@
 		1A57C5F51F881405007D2BD7 /* ChicagoComedy */ = {
 			isa = PBXGroup;
 			children = (
+				1A2469F61F9A80770026045E /* Model */,
 				1A57C6391F901148007D2BD7 /* Extensions */,
 				1A57C62A1F881A47007D2BD7 /* DataControllers */,
 				1A57C6271F8817FD007D2BD7 /* Cells */,
@@ -230,6 +243,7 @@
 				1A57C6401F913DF0007D2BD7 /* UIViewBorder.swift */,
 				1A57C6441F91575D007D2BD7 /* UITableViewBorder.swift */,
 				1A2469F21F9927C30026045E /* ViewControllerPannable.swift */,
+				1A2469F91F9A8F050026045E /* Date+DateParsing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -546,6 +560,7 @@
 				1A57C6291F881812007D2BD7 /* EventCell.swift in Sources */,
 				1A2469F51F99337D0026045E /* ImageContainerViewController.swift in Sources */,
 				1A57C6341F8FE28A007D2BD7 /* EventHeaderCell.swift in Sources */,
+				1A2469F81F9A808E0026045E /* Event.swift in Sources */,
 				1A57C6261F881757007D2BD7 /* CurrentEventsViewController.swift in Sources */,
 				1A57C63F1F9122A2007D2BD7 /* UITextViewFixed.swift in Sources */,
 				1A57C5F91F881405007D2BD7 /* ViewController.swift in Sources */,
@@ -557,6 +572,7 @@
 				1A57C63B1F90115F007D2BD7 /* CardView.swift in Sources */,
 				1A57C6381F8FF316007D2BD7 /* EventDescriptionCell.swift in Sources */,
 				1A2469F31F9927C30026045E /* ViewControllerPannable.swift in Sources */,
+				1A2469FA1F9A8F050026045E /* Date+DateParsing.swift in Sources */,
 				1A1416801F9681CD00A9F651 /* ContainerViewController.swift in Sources */,
 				1A2469F11F9922EC0026045E /* ImageViewerViewController.swift in Sources */,
 				1A57C6431F914930007D2BD7 /* InfoCell.swift in Sources */,
