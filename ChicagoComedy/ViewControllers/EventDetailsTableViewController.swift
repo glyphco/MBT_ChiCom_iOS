@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 import PromiseKit
+import MapKit
 
 class EventDetailsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
@@ -27,6 +28,13 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
     
     @IBAction func imageTapped(_ sender: Any) {
         performSegue(withIdentifier: "ShowOriginalImage", sender: self.event)
+    }
+    
+    @IBAction func mapButtonTapped(_ sender: Any) {
+        if let lat = event?.value(forKey: "lat") as? String, let lng = event?.value(forKey: "lng") as? String,
+            !lat.isEmpty, !lng.isEmpty, let latitude = Double(lat), let longitude = Double(lng)  {
+            openMapForPlace(lat: latitude, lng: longitude)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,9 +62,6 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             cell.eventNameLabel.text = event?.value(forKey: "name") as? String
             cell.eventVenueLabel.text = event?.value(forKey: "venue_name") as? String
             cell.eventAddressLabel.text = event?.value(forKey: "street_address") as? String
-            let startTime = (event?.value(forKey: "localstarttime") as? String) ?? ""
-            let startDate = (event?.value(forKey: "localstartdate") as? String) ?? ""
-            cell.startTimeLabel.text = "\(startDate) \(startTime)"
             return cell
         case 1: //details
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventInfoCell", for: indexPath) as? EventInfoCell else {
@@ -90,5 +95,22 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
         }
     }
     
+    func openMapForPlace(lat: Double, lng: Double) {
+        
+        let latitude: CLLocationDegrees = lat
+        let longitude: CLLocationDegrees = lng
+        
+        let regionDistance:CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = event?.value(forKey: "venue_name") as? String
+        mapItem.openInMaps(launchOptions: options)
+    }
     
 }

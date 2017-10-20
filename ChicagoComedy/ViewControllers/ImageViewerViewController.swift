@@ -11,7 +11,7 @@ import UIKit
 
 class ImageViewerViewController: UIViewController {
     var event: NSDictionary?
-    @IBOutlet var loadingIdicator: UIActivityIndicatorView!
+    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -19,19 +19,20 @@ class ImageViewerViewController: UIViewController {
             getImage(imageUrl: imageUrl)
         } else {
             self.imageView.image = UIImage(named: "event-default")
+            loadingIndicator.isHidden = true
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadingIdicator.isHidden = true
+        loadingIndicator.isHidden = false
     }
     
     func getImage(imageUrl: String){
-        loadingIdicator.isHidden = false
+        loadingIndicator.isHidden = false
         ImageCacheManager.shared.getImage(url: imageUrl, cost: 3).then { image -> Void in
             self.imageView.image = image
         }.always {
-            self.loadingIdicator.isHidden = true
+            self.loadingIndicator.isHidden = true
         }.catch {error in
             print(error)
         }
