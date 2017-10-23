@@ -9,6 +9,8 @@ target 'ChicagoComedy' do
   pod "PromiseKit", "~> 4.4"
   pod 'Alamofire', "~> 4.5"
   pod 'ObjectMapper', :git => 'https://github.com/Hearst-DD/ObjectMapper.git', :branch => 'swift-4'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'ChicagoComedyTests' do
     inherit! :search_paths

@@ -29,6 +29,7 @@ class Event: Mappable {
     var localEndDate:String?
     var priceWord:String?
     var priceMinMax:String?
+    var participants: [Participant] = []
     
     required init?(map: Map) {
         
@@ -58,5 +59,13 @@ class Event: Mappable {
         localEndDate <- map["localenddate"]
         priceWord <- map["priceWord"]
         priceMinMax <- map["priceMinMax"]
+        if let participantsJson = map.JSON["participantsjson"] as? [NSDictionary] {
+            for json in participantsJson {
+                if let participant = Mapper<Participant>().map(JSONString: NSDictionary.toString(data:json)) {
+                    self.participants.append(participant)
+                }
+            }
+            //self.participants =
+        }
     }
 }

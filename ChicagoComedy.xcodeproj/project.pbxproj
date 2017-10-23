@@ -15,6 +15,10 @@
 		1A2469F51F99337D0026045E /* ImageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F41F99337D0026045E /* ImageContainerViewController.swift */; };
 		1A2469F81F9A808E0026045E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F71F9A808E0026045E /* Event.swift */; };
 		1A2469FA1F9A8F050026045E /* Date+DateParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469F91F9A8F050026045E /* Date+DateParsing.swift */; };
+		1A2469FC1F9AA1670026045E /* ParticipantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469FB1F9AA1670026045E /* ParticipantsCell.swift */; };
+		1A2469FE1F9BE2B70026045E /* ParticipantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469FD1F9BE2B70026045E /* ParticipantCell.swift */; };
+		1A246A001F9C124D0026045E /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2469FF1F9C124D0026045E /* Participant.swift */; };
+		1A246A021F9E5BE80026045E /* NSDictionary+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A246A011F9E5BE80026045E /* NSDictionary+Conversions.swift */; };
 		1A57C5F71F881405007D2BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F61F881405007D2BD7 /* AppDelegate.swift */; };
 		1A57C5F91F881405007D2BD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C5F81F881405007D2BD7 /* ViewController.swift */; };
 		1A57C5FC1F881405007D2BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A57C5FA1F881405007D2BD7 /* Main.storyboard */; };
@@ -68,6 +72,10 @@
 		1A2469F41F99337D0026045E /* ImageContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerViewController.swift; sourceTree = "<group>"; };
 		1A2469F71F9A808E0026045E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1A2469F91F9A8F050026045E /* Date+DateParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateParsing.swift"; sourceTree = "<group>"; };
+		1A2469FB1F9AA1670026045E /* ParticipantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsCell.swift; sourceTree = "<group>"; };
+		1A2469FD1F9BE2B70026045E /* ParticipantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantCell.swift; sourceTree = "<group>"; };
+		1A2469FF1F9C124D0026045E /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		1A246A011F9E5BE80026045E /* NSDictionary+Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Conversions.swift"; sourceTree = "<group>"; };
 		1A57C5F31F881405007D2BD7 /* ChicagoComedy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChicagoComedy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A57C5F61F881405007D2BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A57C5F81F881405007D2BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				1A2469F71F9A808E0026045E /* Event.swift */,
+				1A2469FF1F9C124D0026045E /* Participant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +231,8 @@
 				1A57C6371F8FF316007D2BD7 /* EventDescriptionCell.swift */,
 				1A57C63C1F901993007D2BD7 /* EventInfoCell.swift */,
 				1A57C6421F914930007D2BD7 /* InfoCell.swift */,
+				1A2469FB1F9AA1670026045E /* ParticipantsCell.swift */,
+				1A2469FD1F9BE2B70026045E /* ParticipantCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 				1A57C6441F91575D007D2BD7 /* UITableViewBorder.swift */,
 				1A2469F21F9927C30026045E /* ViewControllerPannable.swift */,
 				1A2469F91F9A8F050026045E /* Date+DateParsing.swift */,
+				1A246A011F9E5BE80026045E /* NSDictionary+Conversions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +296,7 @@
 				1A57C5F11F881404007D2BD7 /* Resources */,
 				C76BB1B2C8C06A462CEAB852 /* [CP] Embed Pods Frameworks */,
 				950214584CD11A12A3798E7D /* [CP] Copy Pods Resources */,
+				1AABAEC71F9E737300683D72 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -348,7 +361,7 @@
 				TargetAttributes = {
 					1A57C5F21F881404007D2BD7 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					1A57C6061F881405007D2BD7 = {
 						CreatedOnToolsVersion = 9.0;
@@ -439,6 +452,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		1AABAEC71F9E737300683D72 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 4b64c51435e0d5d7c419cd87cc19e606e5d191a4 b46afb921cd1bb5416666eea24711cf885f31d6b596fb983e2323d0f8110ad97";
 		};
 		353C046ED5EFC226EF1B81A7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -553,11 +579,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A57C6411F913DF0007D2BD7 /* UIViewBorder.swift in Sources */,
+				1A2469FE1F9BE2B70026045E /* ParticipantCell.swift in Sources */,
 				1A57C6451F91575D007D2BD7 /* UITableViewBorder.swift in Sources */,
 				1A57C62E1F88237B007D2BD7 /* EventDetailsViewControlelr.swift in Sources */,
 				1A57C62C1F881A63007D2BD7 /* EventAPIClient.swift in Sources */,
 				1A14167E1F953A4800A9F651 /* ImageCacheManager.swift in Sources */,
 				1A57C6291F881812007D2BD7 /* EventCell.swift in Sources */,
+				1A2469FC1F9AA1670026045E /* ParticipantsCell.swift in Sources */,
+				1A246A021F9E5BE80026045E /* NSDictionary+Conversions.swift in Sources */,
 				1A2469F51F99337D0026045E /* ImageContainerViewController.swift in Sources */,
 				1A57C6341F8FE28A007D2BD7 /* EventHeaderCell.swift in Sources */,
 				1A2469F81F9A808E0026045E /* Event.swift in Sources */,
@@ -570,6 +599,7 @@
 				1A57C6321F8FCD80007D2BD7 /* EventDetailsTableViewController.swift in Sources */,
 				1A1416821F97D87800A9F651 /* MenuViewController.swift in Sources */,
 				1A57C63B1F90115F007D2BD7 /* CardView.swift in Sources */,
+				1A246A001F9C124D0026045E /* Participant.swift in Sources */,
 				1A57C6381F8FF316007D2BD7 /* EventDescriptionCell.swift in Sources */,
 				1A2469F31F9927C30026045E /* ViewControllerPannable.swift in Sources */,
 				1A2469FA1F9A8F050026045E /* Date+DateParsing.swift in Sources */,
@@ -743,13 +773,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H6Y7MH7N2M;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = J49774V88B;
 				INFOPLIST_FILE = ChicagoComedy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myboringtown.ChicagoComedy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "db860965-478d-4f6b-9fe8-d208d8bd1783";
+				PROVISIONING_PROFILE_SPECIFIER = "ChicagoComedy Dev";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -761,13 +793,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H6Y7MH7N2M;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = J49774V88B;
 				INFOPLIST_FILE = ChicagoComedy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myboringtown.ChicagoComedy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6adc1249-9431-430d-b6ce-8722d6fbde0a";
+				PROVISIONING_PROFILE_SPECIFIER = "ChicagoComedy AppStore";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

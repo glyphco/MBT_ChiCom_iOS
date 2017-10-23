@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.5.1)
+  - Crashlytics (3.9.0):
+    - Fabric (~> 1.7.0)
+  - Fabric (1.7.0)
   - ObjectMapper (3.0.0)
   - PromiseKit (4.4.3):
     - PromiseKit/Foundation (= 4.4.3)
@@ -15,6 +18,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - Crashlytics
+  - Fabric
   - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`, branch `swift-4`)
   - PromiseKit (~> 4.4)
 
@@ -30,9 +35,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
+  Fabric: e6be012366472553807dada21243c5ab8d904151
   ObjectMapper: 739e5530df22248823f6cc7ed9e016ebf2c26a27
   PromiseKit: fbb52a0d154402c57eeb6eccd36dd7724fcf6117
 
-PODFILE CHECKSUM: 9e3844ff6ed8273b0db95bda9bbca037dc966974
+PODFILE CHECKSUM: 46e4ba5f16fb33ae1df11002466a77b664b7c14b
 
 COCOAPODS: 1.1.1
