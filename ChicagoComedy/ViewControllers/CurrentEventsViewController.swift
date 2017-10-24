@@ -92,7 +92,12 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         cell.event = event
         if let imageUrl = event.imageSm, !imageUrl.isEmpty {
             ImageCacheManager.shared.getImage(url: imageUrl).then { image -> Void in
-                cell.eventImage.image = image
+                DispatchQueue.main.async(execute: {() -> Void in
+                    let updateCell = self.table.cellForRow(at: indexPath) as? EventCell
+                    if updateCell != nil {
+                        updateCell?.eventImage.image = image
+                    }
+                })
             }.catch {error in
                 print(error)
             }
