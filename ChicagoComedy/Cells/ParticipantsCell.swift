@@ -11,57 +11,27 @@ import UIKit
 
 class ParticipantsCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate {
     var numRows = 0;
-    var tableData = [[String:String]]()
-    @IBOutlet var tableHeightContstraint: NSLayoutConstraint!
+
+    @IBOutlet var tableHeightConstraint: NSLayoutConstraint!
     @IBOutlet var table: UITableView!
-    var participants: [Participant]? {
+    var participants: [Participant] = [] {
         didSet {
-            //            guard let event = event else {
-            //                return
-            //            }
             numRows = 0
             table.dataSource = self
             table.delegate = self
-            table.estimatedRowHeight = 60
+            table.estimatedRowHeight = 30
             table.rowHeight = UITableViewAutomaticDimension
-            
-            //            let price = event.priceWord ?? ""
-            //            let priceMinMax = event.priceMinMax ?? ""
-            //            let priceString = [price, priceMinMax].joined(separator: " ")
-            //            if(!price.isEmpty || !priceMinMax.isEmpty){
-            //                tableData.append(["Price":priceString.trimmingCharacters(in: .whitespaces)])
-            //                numRows += 1
-            //            }
-            //
-            //            if let ages = event.agesWord, !ages.isEmpty {
-            //                tableData.append(["Ages":ages])
-            //                numRows += 1
-            //            }
-            //
-            //            if let startDate = event.localStartDate, !startDate.isEmpty {
-            //                var startTimeString = ""
-            //                if let startTime = event.localStartTime, !startTime.isEmpty {
-            //                    startTimeString = "at \(startTime)"
-            //                }
-            //                tableData.append(["Starts":"\(startDate) \(startTimeString)"])
-            //                numRows += 1
-            //            }
-            //
-            //            if let endDate = event.localEndDate, !endDate.isEmpty {
-            //                var endTimeString = ""
-            //                if let endTime = event.localEndTime, !endDate.isEmpty {
-            //                    endTimeString = "at \(endTime)"
-            //                }
-            //                tableData.append(["Ends":"\(endDate) \(endTimeString)"])
-            //                numRows += 1
-            //            }
             
             table.reloadData()
             table.layoutIfNeeded()
-            //tableHeightConstraint.constant = table.contentSize.height
+            tableHeightConstraint.constant = table.contentSize.height
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return participants.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
@@ -69,10 +39,23 @@ class ParticipantsCell: UITableViewCell, UITableViewDataSource, UITableViewDeleg
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ParticipantCell", for: indexPath) as? ParticipantCell else {
             fatalError("Could not setup participant cell")
         }
+        cell.nameLabel.text = participants[indexPath.row].name
+        cell.timeLabel.text = participants[indexPath.row].start ?? ""
+        if let imageUrl = participants[indexPath.row].imageUrl, !imageUrl.isEmpty {
+            ImageCacheManager.shared.getImage(url: imageUrl, cost: 3).then {image -> Void in
+                DispatchQueue.main.async(execute: {() -> Void in
+                    let updateCell = self.table.cellForRow(at: indexPath) as? ParticipantCell
+                    if updateCell != nil {
+                        updateCell?.participantImage.image = image
+                    }
+                })
+            }.catch { error in
+                print(error.localizedDescription)
+            }
+        } else {
+            cell.participantImage.image = UIImage()
+        }
         
-        //        let title = tableData[indexPath.row].keys.first!
-        //        cell.titleLabel.text = title
-        //        cell.detailsLabel.text = tableData[indexPath.row][title]
         return cell
     }
 }

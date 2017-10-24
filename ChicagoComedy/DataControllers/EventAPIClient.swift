@@ -30,7 +30,8 @@ class EventAPIClient {
                 } else if let json = response.result.value as? [NSDictionary] {
                     var events:[Event] = []
                     for eventJson in json {
-                        if let event = Mapper<Event>().map(JSONString: NSDictionary.toString(data: eventJson)) {
+                        let jsonString = NSDictionary.toString(data: eventJson) ?? ""
+                        if let event = Mapper<Event>().map(JSONString: jsonString) {
                             events.append(event)
                         }
                     }

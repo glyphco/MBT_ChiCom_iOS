@@ -18,12 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logobig" translatesAutoresizingMaskIntoConstraints="NO" id="aWt-YS-P2N">
-                                <rect key="frame" x="85" y="279" width="205" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logobig" translatesAutoresizingMaskIntoConstraints="NO" id="aWt-YS-P2N">
+                                <rect key="frame" x="85" y="259" width="205" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="06j-l5-3Zx"/>
+                                    <constraint firstAttribute="height" constant="109" id="pRk-6Q-BFW"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80452502219777455" blue="0.56934604897874241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aWt-YS-P2N" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-20" id="AEf-49-YHV"/>
+                            <constraint firstItem="aWt-YS-P2N" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LcJ-5M-VVI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

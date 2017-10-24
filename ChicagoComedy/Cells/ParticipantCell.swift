@@ -12,5 +12,5 @@ import UIKit
 class ParticipantCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
-    @IBOutlet var ParticipantImage: UIImageView!
+    @IBOutlet var participantImage: UIImageView!
 }

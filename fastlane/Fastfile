@@ -44,8 +44,20 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     # match(type: "appstore") # more information: https://codesigning.guide
-    gym # Build your app - more options available
-    pilot
+    gym(
+      scheme: "ChicagoComedy", 
+      export_method: "ad-hoc",
+      export_options: {
+        provisioningProfiles: {
+          "com.myboringtown.ChicagoComedy" => "ChicagoComedy AdHoc"
+        }
+      }
+    ) # Build your app - more options available
+
+    crashlytics(
+      api_token: "4b64c51435e0d5d7c419cd87cc19e606e5d191a4",
+      build_secret: "b46afb921cd1bb5416666eea24711cf885f31d6b596fb983e2323d0f8110ad97"
+    )
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)

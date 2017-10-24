@@ -22,7 +22,7 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     
@@ -69,6 +69,12 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             }
             cell.event = event
             return cell
+        case 2 :
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ParticipantsCell", for: indexPath) as? ParticipantsCell else {
+                fatalError("Could not setup participants cell")
+            }
+            cell.participants = event?.participants ?? []
+            return cell
         default: //description
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EventDescriptionCell", for: indexPath) as? EventDescriptionCell else {
                 fatalError("Could not setup event description")
@@ -90,6 +96,8 @@ class EventDetailsTableViewController: UIViewController, UITableViewDataSource, 
             return 192
         case 1:
             return 106
+        case 2:
+            return 100
         default:
             return descriptionHeight
         }
