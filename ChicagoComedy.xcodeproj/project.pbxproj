@@ -40,6 +40,7 @@
 		1A57C6411F913DF0007D2BD7 /* UIViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C6401F913DF0007D2BD7 /* UIViewBorder.swift */; };
 		1A57C6431F914930007D2BD7 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C6421F914930007D2BD7 /* InfoCell.swift */; };
 		1A57C6451F91575D007D2BD7 /* UITableViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57C6441F91575D007D2BD7 /* UITableViewBorder.swift */; };
+		1A596DAB1F9FC94500F14A35 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A596DAA1F9FC94500F14A35 /* RefreshContents.xib */; };
 		7A874E93C84B5FDB7DEE20DD /* Pods_ChicagoComedyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A814EEF48AAEE160495FB9 /* Pods_ChicagoComedyUITests.framework */; };
 		97D8E1F310273D6087580C74 /* Pods_ChicagoComedyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468CC6C64E4F08EDE31F8C00 /* Pods_ChicagoComedyTests.framework */; };
 		E3E9FB31852B810CF3EE98AA /* Pods_ChicagoComedy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474FD40640578183E244CDC5 /* Pods_ChicagoComedy.framework */; };
@@ -103,6 +104,7 @@
 		1A57C6401F913DF0007D2BD7 /* UIViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorder.swift; sourceTree = "<group>"; };
 		1A57C6421F914930007D2BD7 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		1A57C6441F91575D007D2BD7 /* UITableViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewBorder.swift; sourceTree = "<group>"; };
+		1A596DAA1F9FC94500F14A35 /* RefreshContents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 		24D2FE0B8B9E145843522B7F /* Pods-ChicagoComedy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChicagoComedy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChicagoComedy/Pods-ChicagoComedy.debug.xcconfig"; sourceTree = "<group>"; };
 		42A814EEF48AAEE160495FB9 /* Pods_ChicagoComedyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChicagoComedyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		468CC6C64E4F08EDE31F8C00 /* Pods_ChicagoComedyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChicagoComedyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +251,7 @@
 		1A57C6391F901148007D2BD7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1A596DA91F9FC91400F14A35 /* Subviews */,
 				1A57C63A1F90115F007D2BD7 /* CardView.swift */,
 				1A57C63E1F9122A2007D2BD7 /* UITextViewFixed.swift */,
 				1A57C6401F913DF0007D2BD7 /* UIViewBorder.swift */,
@@ -258,6 +261,14 @@
 				1A246A011F9E5BE80026045E /* NSDictionary+Conversions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1A596DA91F9FC91400F14A35 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				1A596DAA1F9FC94500F14A35 /* RefreshContents.xib */,
+			);
+			name = Subviews;
 			sourceTree = "<group>";
 		};
 		392DEEFDE9CD16821E37489E /* Pods */ = {
@@ -401,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A57C6011F881405007D2BD7 /* LaunchScreen.storyboard in Resources */,
+				1A596DAB1F9FC94500F14A35 /* RefreshContents.xib in Resources */,
 				1A57C5FE1F881405007D2BD7 /* Assets.xcassets in Resources */,
 				1A57C5FC1F881405007D2BD7 /* Main.storyboard in Resources */,
 			);

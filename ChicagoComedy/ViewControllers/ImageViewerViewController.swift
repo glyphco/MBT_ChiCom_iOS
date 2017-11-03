@@ -15,20 +15,21 @@ class ImageViewerViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
-        if let imageUrl = event?.imageUrl, !imageUrl.isEmpty {
-            getImage(imageUrl: imageUrl)
-        } else {
-            self.imageView.image = UIImage(named: "event-default")
-            loadingIndicator.isHidden = true
-        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadingIndicator.isHidden = false
+        loadingIndicator.isHidden = true
+        if let imageUrl = event?.imageUrl, !imageUrl.isEmpty {
+            loadingIndicator.isHidden = false
+            getImage(imageUrl: imageUrl)
+        } else {
+            self.imageView.image = UIImage(named: "event-default")
+        }
     }
     
     func getImage(imageUrl: String){
-        loadingIndicator.isHidden = false
+        print("tried to get image")
         ImageCacheManager.shared.getImage(url: imageUrl, cost: 3).then { image -> Void in
             self.imageView.image = image
         }.always {

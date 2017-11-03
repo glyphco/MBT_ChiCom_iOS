@@ -873,15 +873,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90980392156862744" green="0.91764705882352937" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="198" id="7gc-LU-w29">
-                                        <rect key="frame" x="0.0" y="223" width="375" height="198"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="292" id="7gc-LU-w29">
+                                        <rect key="frame" x="0.0" y="223" width="375" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7gc-LU-w29" id="QSH-4M-B6t">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="292"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPh-av-S2c" customClass="CardView" customModule="ChicagoComedy" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="190"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="284"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXp-0t-bil">
                                                             <rect key="frame" x="16" y="16" width="327" height="19.5"/>
@@ -896,6 +896,51 @@
                                                                 <constraint firstAttribute="height" constant="1" id="rWo-Al-6o8"/>
                                                             </constraints>
                                                         </view>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carleton" translatesAutoresizingMaskIntoConstraints="NO" id="mH7-IU-Sra">
+                                                            <rect key="frame" x="16" y="64.5" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="bAS-eE-fVf"/>
+                                                                <constraint firstAttribute="height" constant="40" id="gMg-md-CXH"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carleton Maybell - Lead Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ub-eG-WOI">
+                                                            <rect key="frame" x="72" y="75" width="271" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jeff" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-pF-KQR">
+                                                            <rect key="frame" x="16" y="120" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="Ftp-A4-ROY"/>
+                                                                <constraint firstAttribute="width" constant="40" id="PUT-nV-6lE"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shawn" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-fY-sTa">
+                                                            <rect key="frame" x="16" y="176" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="T6q-61-ed6"/>
+                                                                <constraint firstAttribute="width" constant="40" id="po2-yw-8JQ"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeff Pittelkow - Time and Testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbH-qC-mrP">
+                                                            <rect key="frame" x="72" y="130" width="271" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shawn 'glypher' Dalton - Architect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDU-uv-p0A">
+                                                            <rect key="frame" x="72" y="185" width="271" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Josh Huey - Graphic Designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SME-bq-NGQ">
+                                                            <rect key="frame" x="72" y="240" width="271" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIH-Uu-wPm" customClass="UITextViewFixed" customModule="ChicagoComedy" customModuleProvider="target">
                                                             <rect key="frame" x="16" y="60.5" width="327" height="113.5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -917,16 +962,35 @@ Shawn 'glypher' Dalton - Architect</string>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="AbH-qC-mrP" firstAttribute="top" secondItem="8ub-eG-WOI" secondAttribute="bottom" constant="37" id="1gN-z2-OT8"/>
                                                         <constraint firstItem="MDm-vx-mAs" firstAttribute="top" secondItem="bXp-0t-bil" secondAttribute="bottom" constant="12" id="3xH-N2-z8E"/>
+                                                        <constraint firstItem="5Kf-pF-KQR" firstAttribute="top" secondItem="mH7-IU-Sra" secondAttribute="bottom" constant="16" id="7Ga-9s-Ayz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NDU-uv-p0A" secondAttribute="trailing" constant="16" id="9SZ-2e-mYC"/>
                                                         <constraint firstItem="bXp-0t-bil" firstAttribute="top" secondItem="zPh-av-S2c" secondAttribute="top" constant="16" id="9Yh-wP-zdW"/>
                                                         <constraint firstAttribute="trailing" secondItem="bXp-0t-bil" secondAttribute="trailing" constant="16" id="9u9-Z3-9Xs"/>
+                                                        <constraint firstItem="mH7-IU-Sra" firstAttribute="top" secondItem="MDm-vx-mAs" secondAttribute="bottom" constant="16" id="BDg-ZG-Sim"/>
+                                                        <constraint firstAttribute="trailing" secondItem="AbH-qC-mrP" secondAttribute="trailing" constant="16" id="C0a-3o-AeW"/>
+                                                        <constraint firstItem="AbH-qC-mrP" firstAttribute="leading" secondItem="5Kf-pF-KQR" secondAttribute="trailing" constant="16" id="Kqv-b2-9uZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SME-bq-NGQ" secondAttribute="trailing" constant="16" id="OtZ-DJ-IfD"/>
                                                         <constraint firstItem="WIH-Uu-wPm" firstAttribute="top" secondItem="MDm-vx-mAs" secondAttribute="bottom" constant="12" id="Oue-I0-YDc"/>
+                                                        <constraint firstItem="8ub-eG-WOI" firstAttribute="top" secondItem="MDm-vx-mAs" secondAttribute="bottom" constant="26.5" id="Sl9-jt-mzR"/>
+                                                        <constraint firstItem="VTo-fY-sTa" firstAttribute="leading" secondItem="zPh-av-S2c" secondAttribute="leading" constant="16" id="TBI-rj-D3f"/>
+                                                        <constraint firstItem="8ub-eG-WOI" firstAttribute="leading" secondItem="mH7-IU-Sra" secondAttribute="trailing" constant="16" id="Xi2-IB-keJ"/>
+                                                        <constraint firstItem="VTo-fY-sTa" firstAttribute="top" secondItem="5Kf-pF-KQR" secondAttribute="bottom" constant="16" id="Xmh-4j-aE9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8ub-eG-WOI" secondAttribute="trailing" constant="16" id="ZIS-LG-yEk"/>
                                                         <constraint firstAttribute="trailing" secondItem="MDm-vx-mAs" secondAttribute="trailing" id="afv-HJ-Zvb"/>
+                                                        <constraint firstItem="NDU-uv-p0A" firstAttribute="leading" secondItem="VTo-fY-sTa" secondAttribute="trailing" constant="16" id="bV6-tX-vka"/>
                                                         <constraint firstItem="MDm-vx-mAs" firstAttribute="leading" secondItem="zPh-av-S2c" secondAttribute="leading" id="cqa-Dz-Kj0"/>
                                                         <constraint firstAttribute="bottom" secondItem="WIH-Uu-wPm" secondAttribute="bottom" constant="16" id="feb-NH-LCV"/>
                                                         <constraint firstAttribute="trailing" secondItem="WIH-Uu-wPm" secondAttribute="trailing" constant="16" id="huF-R2-fg6"/>
+                                                        <constraint firstItem="SME-bq-NGQ" firstAttribute="leading" secondItem="zPh-av-S2c" secondAttribute="leading" constant="72" id="idX-f2-whN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SME-bq-NGQ" secondAttribute="bottom" constant="16" id="kqO-wG-ft4"/>
                                                         <constraint firstItem="bXp-0t-bil" firstAttribute="leading" secondItem="zPh-av-S2c" secondAttribute="leading" constant="16" id="lQy-Va-hli"/>
                                                         <constraint firstItem="WIH-Uu-wPm" firstAttribute="leading" secondItem="zPh-av-S2c" secondAttribute="leading" constant="16" id="mSO-yw-rNk"/>
+                                                        <constraint firstItem="mH7-IU-Sra" firstAttribute="leading" secondItem="zPh-av-S2c" secondAttribute="leading" constant="16" id="nSX-Gz-VA2"/>
+                                                        <constraint firstItem="5Kf-pF-KQR" firstAttribute="leading" secondItem="zPh-av-S2c" secondAttribute="leading" constant="16" id="t7t-54-L2m"/>
+                                                        <constraint firstItem="SME-bq-NGQ" firstAttribute="top" secondItem="NDU-uv-p0A" secondAttribute="bottom" constant="37" id="vZk-aB-JHY"/>
+                                                        <constraint firstItem="NDU-uv-p0A" firstAttribute="top" secondItem="AbH-qC-mrP" secondAttribute="bottom" constant="37" id="wdD-ql-mP0"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -945,6 +1009,11 @@ Shawn 'glypher' Dalton - Architect</string>
                                                             <real key="value" value="0.20000000000000001"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="WIH-Uu-wPm"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -957,7 +1026,7 @@ Shawn 'glypher' Dalton - Architect</string>
                                         <color key="backgroundColor" red="0.90980392160000001" green="0.91764705879999997" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="198" id="H9e-tf-xCe">
-                                        <rect key="frame" x="0.0" y="421" width="375" height="198"/>
+                                        <rect key="frame" x="0.0" y="515" width="375" height="198"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H9e-tf-xCe" id="lJR-hl-yb9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
@@ -1037,7 +1106,7 @@ Shawn 'glypher' Dalton - Architect</string>
                                         <color key="backgroundColor" red="0.90980392160000001" green="0.91764705879999997" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="198" id="1Xh-VD-Bgs">
-                                        <rect key="frame" x="0.0" y="619" width="375" height="198"/>
+                                        <rect key="frame" x="0.0" y="713" width="375" height="198"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Xh-VD-Bgs" id="8BV-Eb-Gvz">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
@@ -1127,7 +1196,7 @@ Shawn 'glypher' Dalton - Architect</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aU4-mb-8K2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="-1075"/>
+            <point key="canvasLocation" x="1544.8" y="-1075.4122938530736"/>
         </scene>
         <!--Image Viewer View Controller-->
         <scene sceneID="kLL-3H-i4D">
@@ -1169,6 +1238,9 @@ Shawn 'glypher' Dalton - Architect</string>
     </scenes>
     <resources>
         <image name=" " width="16" height="16"/>
+        <image name="carleton" width="200" height="200"/>
         <image name="hamburger" width="25" height="25"/>
+        <image name="jeff" width="200" height="200"/>
+        <image name="shawn" width="200" height="200"/>
     </resources>
 </document>

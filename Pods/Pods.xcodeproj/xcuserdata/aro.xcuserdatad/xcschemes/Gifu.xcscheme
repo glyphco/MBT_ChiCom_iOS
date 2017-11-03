@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '509BCC94681DC3727CA8EE7D0D765657'
-               BlueprintName = 'PromiseKit'
+               BlueprintIdentifier = '5B9888C33DE4EBFB8177CEA845DEEA74'
+               BlueprintName = 'Gifu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PromiseKit.framework'>
+               BuildableName = 'Gifu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
