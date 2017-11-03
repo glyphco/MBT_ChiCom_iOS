@@ -30,7 +30,7 @@ platform :ios do
   desc "Bumps build number and tags the current commit. Requires a clean working directory!"
   lane :bump do
 
-    ensure_git_status_clean
+    #ensure_git_status_clean
 
     # Increment the build number (not the version number)
     increment_build_number(xcodeproj: "ChicagoComedy.xcodeproj")
