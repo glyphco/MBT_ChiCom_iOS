@@ -28,7 +28,7 @@ class EventCell: UITableViewCell {
             venueLabel.text = event.venueName ?? "No venue"
             let startTime = event.localStartTime ?? ""
             let startDate = event.localStartDate ?? ""
-            dateTimeLabel.text = "\(startDate) \(startTime)"
+            dateTimeLabel.text = "\(startDate), \(startTime)"
             
             if let startDateTime = event.localStart {
                 let theFormatter = DateFormatter()
