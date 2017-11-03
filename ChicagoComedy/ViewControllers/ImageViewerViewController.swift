@@ -29,7 +29,6 @@ class ImageViewerViewController: UIViewController {
     }
     
     func getImage(imageUrl: String){
-        print("tried to get image")
         ImageCacheManager.shared.getImage(url: imageUrl, cost: 3).then { image -> Void in
             self.imageView.image = image
         }.always {
