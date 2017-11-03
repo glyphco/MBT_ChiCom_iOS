@@ -15,6 +15,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     var refreshControl = UIRefreshControl()
     
     @IBOutlet var table: UITableView!
+    var customView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         
         self.refreshControl.addTarget(self, action: #selector(self.refreshEvents), for: UIControlEvents.valueChanged)
         self.table?.addSubview(refreshControl)
+        loadCustomRefreshContents()
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,7 +94,12 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         cell.event = event
         if let imageUrl = event.imageSm, !imageUrl.isEmpty {
             ImageCacheManager.shared.getImage(url: imageUrl).then { image -> Void in
-                cell.eventImage.image = image
+                DispatchQueue.main.async(execute: {() -> Void in
+                    let updateCell = self.table.cellForRow(at: indexPath) as? EventCell
+                    if updateCell != nil {
+                        updateCell?.eventImage.image = image
+                    }
+                })
             }.catch {error in
                 print(error)
             }
@@ -110,5 +117,12 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "ShowEventDetail", sender: events[indexPath.row])
+    }
+    
+    func loadCustomRefreshContents() {
+        let refreshContents = Bundle.main.loadNibNamed("RefreshContents", owner: self, options: nil)
+        customView = refreshContents![0] as! UIView
+        customView.frame = refreshControl.bounds
+        refreshControl.addSubview(customView)
     }
 }

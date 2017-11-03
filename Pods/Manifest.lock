@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (4.5.1)
+  - Crashlytics (3.9.0):
+    - Fabric (~> 1.7.0)
+  - Fabric (1.7.0)
+  - Gifu (2.0.0)
   - ObjectMapper (3.0.0)
   - PromiseKit (4.4.3):
     - PromiseKit/Foundation (= 4.4.3)
@@ -15,24 +19,36 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - Crashlytics
+  - Fabric
+  - Gifu (from `https://github.com/kaishin/Gifu.git`, branch `swift4`)
   - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`, branch `swift-4`)
   - PromiseKit (~> 4.4)
 
 EXTERNAL SOURCES:
+  Gifu:
+    :branch: swift4
+    :git: https://github.com/kaishin/Gifu.git
   ObjectMapper:
     :branch: swift-4
     :git: https://github.com/Hearst-DD/ObjectMapper.git
 
 CHECKOUT OPTIONS:
+  Gifu:
+    :commit: 50a9851d556240fe7341755c3b8ea207b142a803
+    :git: https://github.com/kaishin/Gifu.git
   ObjectMapper:
     :commit: 18051553fc44e98ffb1b7e93fa94cd184283d993
     :git: https://github.com/Hearst-DD/ObjectMapper.git
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
+  Fabric: e6be012366472553807dada21243c5ab8d904151
+  Gifu: 6c9726dcbb30ad85efe1aa85603392b5ec592e33
   ObjectMapper: 739e5530df22248823f6cc7ed9e016ebf2c26a27
   PromiseKit: fbb52a0d154402c57eeb6eccd36dd7724fcf6117
 
-PODFILE CHECKSUM: 9e3844ff6ed8273b0db95bda9bbca037dc966974
+PODFILE CHECKSUM: 1dbeb6ce27cac3f7e21997b2f525d6c7403adf4b
 
 COCOAPODS: 1.1.1

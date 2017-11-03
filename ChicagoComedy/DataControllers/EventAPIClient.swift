@@ -30,7 +30,8 @@ class EventAPIClient {
                 } else if let json = response.result.value as? [NSDictionary] {
                     var events:[Event] = []
                     for eventJson in json {
-                        if let event = Mapper<Event>().map(JSONString: self.dictionaryToString(data: eventJson)) {
+                        let jsonString = NSDictionary.toString(data: eventJson) ?? ""
+                        if let event = Mapper<Event>().map(JSONString: jsonString) {
                             events.append(event)
                         }
                     }
@@ -40,18 +41,5 @@ class EventAPIClient {
                 }
             })
         }
-    }
-    
-    func dictionaryToString(data: NSDictionary)->String {
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: data)
-            if let json = String(data: jsonData, encoding: .utf8) {
-                return json
-            }
-        } catch {
-            //LOG AN ERROR HERE
-            fatalError("Couldnt convert event json to string")
-        }
-        return ""
     }
 }
